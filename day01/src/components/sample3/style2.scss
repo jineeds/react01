@@ -1,0 +1,41 @@
+.wrap {
+  width: 500px;
+  margin: 20px auto;
+  border: 1px solid #000;
+
+  .bigimg {
+    position: relative;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 500px;
+
+    h2 {
+      position: absolute;
+      left: 30px;
+      top: 30px;
+      font-size: 30px;
+      color: #fff;
+    }
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      margin-bottom: 10px;
+      cursor: pointer;
+      padding: 4px;
+      background: #999;
+      img {
+        vertical-align: middle;
+      }
+      &.on {
+        background: pink;
+      }
+    }
+    & + p {
+      font-size: 20px;
+      margin-left: 10px;
+    }
+  }
+}

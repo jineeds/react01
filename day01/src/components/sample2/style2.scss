@@ -1,0 +1,85 @@
+.wrap {
+  width: 1000px;
+  margin: 20px auto;
+  border: 1px solid #000;
+  display: flex;
+
+  > div {
+    width: 500px;
+  }
+
+  .bigimg {
+    position: relative;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 500px;
+    cursor: pointer;
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      margin-bottom: 10px;
+      cursor: pointer;
+      padding: 4px;
+      background: #999;
+      img {
+        vertical-align: middle;
+      }
+      &.on {
+        background: pink;
+      }
+    }
+    & + p {
+      font-size: 20px;
+      margin-left: 10px;
+    }
+  }
+
+  .view {
+    padding: 20px;
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 2;
+      margin-top: 30px;
+      white-space: pre-wrap;
+    }
+  }
+}
+
+.bg {
+  position: fixed;
+  left: 1px;
+  top: 0;
+  width: 100vw;
+  height: 100vw;
+  background: #000;
+  z-index: 100;
+  opacity: 0.7;
+}
+.popup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 600px;
+  background: #fff;
+  z-index: 140;
+  padding: 40px;
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  h2 {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+}

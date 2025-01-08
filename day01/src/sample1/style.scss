@@ -1,0 +1,70 @@
+.business {
+  width: 100%;
+  .inner {
+    width: 1140px;
+    margin: auto;
+    padding: 100px 0;
+  }
+  h2 {
+    font-size: 35px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  h2 + p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  .list {
+    display: flex;
+    justify-content: space-between;
+    li {
+      width: 270px;
+      a {
+        div {
+          width: 270px;
+          height: 365px;
+          overflow: hidden;
+          img {
+            width: 270px;
+            transition: 0.4s;
+          }
+        }
+        h3 {
+          padding: 20px 0;
+          font-size: 20px;
+          line-height: 1.4;
+          border-bottom: 1px solid #dcdcdc;
+          margin-bottom: 20px;
+          span {
+            display: block;
+          }
+        }
+        p {
+          font-size: 16px;
+          color: #666;
+        }
+      }
+      &:hover a {
+        div {
+          img {
+            transform: scale(1.03);
+          }
+        }
+      }
+    }
+  }
+  .more {
+    width: 180px;
+    margin: 45px auto;
+    a {
+      display: block;
+      height: 50px;
+      border: 1px solid #999;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 25px;
+    }
+  }
+}
