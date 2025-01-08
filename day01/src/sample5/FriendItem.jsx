@@ -9,7 +9,7 @@ const FriendItem = ({ item, onDel }) => {
         <strong>이름 : {name}</strong>
         <span>나이 : {age}</span>
       </div>
-      <button onClick={() => onDel(item.id)}>삭제</button>
+      <button onClick={() => onDel(id)}>삭제</button>
     </li>
   );
 };

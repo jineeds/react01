@@ -33,6 +33,7 @@ const Friend = () => {
   // ?? 고민 => input => 15개?
   const onAdd = (obj) => {
     obj.id = no.current++;
+    console.log(obj);
     setData([...data, obj]);
   };
 
@@ -54,7 +55,7 @@ const Friend = () => {
         <button onClick={onResore}>초기 복구</button>
       </p>
       {isShow && <FriendInput onAdd={onAdd} />}
-      <FriendInput onAdd={onAdd} />
+      {/* <FriendInput onAdd={onAdd} /> */}
     </div>
   );
 };
