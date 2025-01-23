@@ -1,0 +1,103 @@
+import { createSlice } from '@reduxjs/toolkit'
+
+const initialState = {  
+}
+
+export const xxSlice = createSlice({
+  name: '구별이름',
+  initialState,
+  reducers: {
+    함수명: (state, action) => {      
+      /*
+      state.키 = 값 
+      action.payload  => 넘어온값 
+      const 변수 = action.payload 
+      const {x} = action.payload 
+      const {x,y} = action.payload 
+      */
+    },    
+  },
+})
+
+
+export const xxActions = xxSlice.actions
+export default xxSlice.reducer
+
+//////////////////////
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+// import { userAPI } from './userAPI' 외부 api 만들어서 불러오기 
+import axios from 'axios'
+
+export const getxxx = createAsyncThunk( 'xxx/getxxx', async () => {
+    const response = await axios.get('url')
+    return response.data
+  },
+)
+
+const initialState = {
+  data:[],
+  loading:true ,
+  error: null 
+} 
+
+const xxsSlice = createSlice({
+  name: 'xx',
+  initialState,
+  reducers: {
+    //함수명:(state,action) => {}
+  },
+  extraReducers: (builder) => {   
+            .addCase(getxxx.pending, (state, action) => {
+                //대기
+            })
+            .addCase(getxxx.fulfilled, (state, action) => {
+                //성공
+                state.data = action.payload;
+            })
+            .addCase(getxxx.rejected, (state, action) => {
+                //실패
+            });
+  },
+})
+
+export const xxActions = xxSlice.actions
+export default xxSlice.reducer
+
+////////////////
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+// import { userAPI } from './userAPI' 외부 api 만들어서 불러오기
+import axios from 'axios';
+
+export const getPost = createAsyncThunk('xxx/getPost', async () => {
+    const response = await axios.get('url');
+    return response.data;
+});
+
+const initialState = {
+    data: [],
+    loading: true,
+    error: null,
+};
+
+const xxsSlice = createSlice({
+    name: 'xx',
+    initialState,
+    reducers: {
+        //함수명:(state,action) => {}
+    },
+    extraReducers: (builder) => {
+        builder
+            .addCase(getPost.pending, (state, action) => {
+                //대기
+            })
+            .addCase(getPost.fulfilled, (state, action) => {
+                //성공
+            })
+            .addCase(getPost.rejected, (state, action) => {
+                //실패
+            });
+    },
+});
+
+export const xxActions = xxSlice.actions;
+export default xxSlice.reducer;

@@ -1,0 +1,62 @@
+
+import { createSlice } from '@reduxjs/toolkit';
+import 참조변수 from '../../assets/api/데이터';
+
+const initialState = {};
+
+export const xxSlice = createSlice({
+    name: 'xx',
+    initialState,
+    reducers: {},
+});
+
+export const {} = xxSlice.actions;
+export default xxSlice.reducer;
+
+//////////////////////////////////
+
+import {  createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+ 
+export const getxx = createAsyncThunk('xx/getxx', async () => {
+    const res = await axios.get(``);
+    return res.data;
+});
+
+/////////////////// 사용예시
+
+
+import { createSlice } from '@reduxjs/toolkit';
+import { getxxx } from './getThunk'
+ 
+const initialState = {    
+}; 
+
+export const 이름Slice = createSlice({
+    name: '이름',
+    initialState,
+    reducers: {},
+    extraReducers: (builder) => {
+        builder
+            .addCase(getxx.pending, (state, action) => {
+                 
+            })
+            .addCase(getxx.fulfilled, (state, action) => {
+                 
+            })
+            .addCase(getxx.rejected, (state, action) => {
+                
+            });
+    },
+});
+
+// export const 이름Actions = 이름Slice.actions;
+export default 이름Slice.reducer;
+
+/////////////////////////////////////////////////
+방법1  : 성격별로 slice 분리 작업 
+방법2  : 하나로 slice 작업 
+
+
+
+

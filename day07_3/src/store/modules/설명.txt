@@ -1,0 +1,17 @@
+import { createSlice } from '@reduxjs/toolkit'
+
+const initialState = {
+  초기값
+}
+
+export const 이름Slice = createSlice({
+  name: '구별이름',
+  initialState,
+  reducers: {
+    함수명: (state , action) => {      
+        //action.payload -> 값을 받아오기      
+    },     
+  },
+})
+export const { 함수 } = 이름Slice.actions
+export default 이름Slice.reducer

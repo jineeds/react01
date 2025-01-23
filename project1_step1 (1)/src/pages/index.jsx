@@ -1,0 +1,12 @@
+export { default as NotFiles } from './notfile';
+export { default as About } from './about';
+export { default as Artist } from './artist';
+export { default as Customer } from './customer';
+export { default as Gallery } from './gallery';
+export { default as Login } from './login/Login';
+export { default as Logout } from './login/LogOut';
+export { default as Join } from './login/Join';
+export { default as Mypage } from './login/Mypage';
+export { default as Main } from './main';
+export { default as Music } from './music';
+export { default as Notice } from './notice';

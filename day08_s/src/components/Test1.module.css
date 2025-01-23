@@ -1,0 +1,13 @@
+.box {
+  width: 500px;
+  margin: auto;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box article {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}

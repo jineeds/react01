@@ -1,0 +1,20 @@
+.wrap {
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 350px;
+  height: 200px;
+  border: 1px solid red;
+}
+
+.bg {
+  background: orange;
+}
+
+.size {
+  width: 200px;
+  height: 100px;
+}
